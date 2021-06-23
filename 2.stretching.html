@@ -4,9 +4,49 @@
         <title>STRETCHING</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script>
+            var Links={
+                setColor: function(color){
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i < alist.length){
+                    alist[i].style.color = color;
+                    i = i + 1;
+                    }
+            }
+            }
+            var Body ={
+                setColor:function(color){
+                document.querySelector('body').style.color = color;
+            },
+                setBackgroundColor:function(color){
+                document.querySelector('body').style.backgroundColor=color;
+            }
+            }
+            function nightDayHandler(self){
+                var target = document.querySelector('body');
+                if (self.value==='NIGHT') {
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                self.value='DAY';
+                Links.setColor('powderblue');
+
+                } else {
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                self.value='NIGHT';
+                Links.setColor('blue');
+                }
+            }
+       </script>
     </head>
     <body>
         <h1><a href="index.html">EXERCISE</a></h1>
+        <div class="button">
+            <input type="button" value="NIGHT" onclick="
+                nightDayHandler(this);
+            ">
+            </div>
      <div id="grid">
         <ol>
             <li><a href="2.stretching.html">STRETCHING</a></li>

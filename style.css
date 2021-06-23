@@ -6,12 +6,14 @@ body{
     margin:0;
 }
 h1{
+    color: blue;
     text-align: center;
     border-bottom: 1px solid olive;
     padding:20px;
     margin:0;
 }
 a{
+    color: blue;
     text-decoration:none;
 }
 #grid ol{
@@ -24,6 +26,11 @@ a{
 #article{
     padding-left:10px;
 }
+.button{
+    text-align: center;
+    padding:10px;
+    border-bottom: 1px olive solid;
+}
 @media(max-width:700px){
     #grid{
     display:block;
@@ -34,4 +41,7 @@ a{
 h1{
     border-bottom:none;
 }
+    .button{
+        border-bottom: none;
+    }
 }
